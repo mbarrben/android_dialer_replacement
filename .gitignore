@@ -1,0 +1,18 @@
+# Generated
+bin/
+gen/
+
+# Gradle
+.gradle/
+build/
+
+# Local config
+local.properties
+
+# Intellij
+*.iml
+.idea
+
+# OS-specific files
+.DS_Store
+Thumbs.db

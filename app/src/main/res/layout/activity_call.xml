@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    tools:context=".CallActivity"
+    >
+
+  <ImageView
+      android:id="@+id/imageBackground"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@drawable/cat"
+      android:fitsSystemWindows="false"
+      android:foreground="#33000000"
+      />
+
+  <TextView
+      android:id="@+id/textDisplayName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="50dp"
+      android:gravity="center_horizontal"
+      android:textColor="@android:color/white"
+      android:textSize="32sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:text="@tools:sample/full_names"
+      />
+
+  <TextView
+      android:id="@+id/textStatus"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:gravity="center_horizontal"
+      android:textColor="@android:color/white"
+      android:textSize="16sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textDisplayName"
+      tools:text="Calling…"
+      />
+
+  <TextView
+      android:id="@+id/textDuration"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:gravity="center_horizontal"
+      android:text="00:00:00"
+      android:textColor="@android:color/white"
+      android:textSize="16sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textStatus"
+      />
+
+  <ImageView
+      android:id="@+id/buttonHangup"
+      android:layout_width="80dp"
+      android:layout_height="80dp"
+      android:layout_marginBottom="24dp"
+      android:layout_marginStart="40dp"
+      android:background="@drawable/ic_hangup_button_background"
+      android:clickable="true"
+      android:focusable="true"
+      android:scaleType="center"
+      android:src="@drawable/ic_call_end"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@id/buttonAnswer"
+      app:layout_constraintHorizontal_chainStyle="spread_inside"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_goneMarginEnd="40dp"
+      />
+
+  <ImageView
+      android:id="@+id/buttonAnswer"
+      android:layout_width="80dp"
+      android:layout_height="80dp"
+      android:layout_marginBottom="24dp"
+      android:layout_marginEnd="40dp"
+      android:background="@drawable/ic_answer_button_background"
+      android:clickable="true"
+      android:focusable="true"
+      android:scaleType="center"
+      android:src="@drawable/ic_call"
+      android:visibility="gone"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@id/buttonHangup"
+      tools:visibility="visible"
+      />
+
+</android.support.constraint.ConstraintLayout>
